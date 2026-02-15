@@ -1,20 +1,30 @@
 # Remote Android Control - ReAdCon
 
-A Linux-based tool for controlling Android devices remotely using ADB and scrcpy.
+A Linux-based tool for controlling Android devices remotely using ADB and scrcpy-server.
 
 ## Requirements
 - Linux operating system
 - ADB (Android Debug Bridge)
-- scrcpy (screen mirroring tool)
+- scrcpy-server (screen mirroring tool)
 - Python 3.x
 - pynput library (`pip install pynput`)
 
 ## Installation
-1. Install ADB and scrcpy:
+1. Install ADB:
 sudo apt update
-sudo apt install adb scrcpy
+sudo apt install adb
 
-2. Install required Python package:
+2. Download and install scrcpy-server:
+# Download scrcpy-server from official GitHub repository
+wget https://github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-server-v1.24
+
+# Make the server executable
+chmod +x scrcpy-server-v1.24
+
+# Move the server to a directory in your PATH (e.g., /usr/local/bin/)
+sudo mv scrcpy-server-v1.24 /usr/local/bin/scrcpy-server
+
+3. Install required Python package:
 pip install -r requirements.txt
 
 ## Usage
@@ -28,7 +38,7 @@ python remote_control.py
 
 ## Features
 - Connect to Android devices via USB or Wi-Fi
-- Mirror device screen using scrcpy
+- Mirror device screen using scrcpy-server
 - Control device using mouse and keyboard
 - Save device connections for future use
 
@@ -39,4 +49,4 @@ python remote_control.py
 
 ## Notes
 - Make sure USB debugging is enabled on your Android device
-- Ensure scrcpy is installed and configured properly
+- Ensure scrcpy-server is installed and configured properly
