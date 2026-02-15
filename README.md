@@ -29,7 +29,7 @@ sudo mv scrcpy-server-v1.24 /usr/local/bin/scrcpy-server
 ```
 
 3. Install required Python package:
- ```bash
+```bash
 pip install -r requirements.txt
 ```
 
